@@ -36,7 +36,7 @@ Chiudi e riapri il terminale per aggiornare il PATH.
 
 ```powershell
 git clone https://github.com/Gabryb92/travel-agent-api
-cd nome-progetto
+cd travel-agent-api
 poetry install
 poetry env activate
 ```
@@ -71,7 +71,7 @@ source ~/.zprofile
 
 ```bash
 git clone https://github.com/Gabryb92/travel-agent-api
-cd nome-progetto
+cd travel-agent-api
 poetry install
 eval $(poetry env activate)
 ```
@@ -108,7 +108,7 @@ source ~/.bashrc
 
 ```bash
 git clone https://github.com/Gabryb92/travel-agent-api
-cd nome-progetto
+cd travel-agent-api
 poetry install
 eval $(poetry env activate)
 ```
