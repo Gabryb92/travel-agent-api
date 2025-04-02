@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 from langchain_core.tools import tool
 from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
@@ -15,7 +17,9 @@ def chain_historical_expert(input_text:str) -> str:
     
     """
     
-    model = ChatOpenAI(model="gpt-4o")
+    load_dotenv()
+    
+    model = ChatOpenAI(model_name="gpt-4o")
     
     system_prompt = """
     You are an historical expert.

@@ -1,3 +1,6 @@
+import os
+from dotenv import load_dotenv
+
 from datetime import datetime
 from langchain_openai import ChatOpenAI
 from langgraph.prebuilt import create_react_agent
@@ -8,6 +11,7 @@ from app.tools.hotels_finder import hotels_finder
 from app.tools.chain_historical_expert import chain_historical_expert
 from app.tools.chain_travel_plan import chain_travel_plan
 
+load_dotenv()
 
 FLIGHTS_OUTPUT = """
 format: markdow

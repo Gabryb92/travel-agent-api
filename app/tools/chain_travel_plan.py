@@ -1,10 +1,13 @@
+import os
 from langchain_core.tools import tool
 from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 from pydantic import BaseModel , Field
 from typing import Optional
 from langchain_core.output_parsers import PydanticOutputParser
+from dotenv import load_dotenv
 
+load_dotenv()
 
 class TravelPlanInput(BaseModel):
     start_date: str = Field(description="The start date of the trip (YYYY-MM-DD) e.g. 2024-12-13.")
@@ -41,6 +44,8 @@ def chain_travel_plan(params: TravelPlanInput) -> TravelPlanOutput:
     Return:
         TravelPlanOutput: The generated travel plan content    
     """
+   
+    
     model = ChatOpenAI(model_name="gpt-4o")
     
     system_prompt = f"""
