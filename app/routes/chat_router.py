@@ -51,3 +51,7 @@ def chat_completion(request: ChatCompletionRequest):
     # Restituzione della risposta
     return response
         
+        
+@router.get("/ping")
+def ping():
+    return {"message": "pong"}

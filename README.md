@@ -180,3 +180,9 @@ CORS_ORIGINS=https://ilmiosito.it,https://frontend.local
 ### 📌 Se lasci la variabile vuota o ometti il campo, nessun dominio sarà autorizzato.
 
 ---
+
+### Per lanciare il progetto lancia il seguente comando:
+
+```bash
+poetry run uvicorn app.main:app --reload --port 8080
+```

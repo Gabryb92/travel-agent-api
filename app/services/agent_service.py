@@ -3,7 +3,11 @@ from langchain_openai import ChatOpenAI
 from langgraph.prebuilt import create_react_agent
 
 #Tools
-from app.tools import flights_finders,hotels_finder,chain_historical_expert,chain_travel_plan
+from app.tools.flights_finders import flights_finder
+from app.tools.hotels_finder import hotels_finder
+from app.tools.chain_historical_expert import chain_historical_expert
+from app.tools.chain_travel_plan import chain_travel_plan
+
 
 FLIGHTS_OUTPUT = """
 format: markdow
@@ -94,7 +98,7 @@ class Agent:
         self.model = ChatOpenAI(model_name="gpt-4o")
         self.tools = [
             chain_historical_expert,
-            flights_finders,
+            flights_finder,
             hotels_finder,
             chain_travel_plan
         ]
