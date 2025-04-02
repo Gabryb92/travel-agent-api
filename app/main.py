@@ -2,7 +2,7 @@
 from fastapi import FastAPI
 
 # Qui viene importato un router chiamato `chat_router` da un modulo locale (file) `app.routes`. I router in FastAPI sono utilizzati per organizzare le diverse route (endpoint) dell'API in modo modulare.
-from routes import chat_router
+from app.routes import chat_router
 
 # Questa riga importa il middleware CORS (Cross-Origin Resource Sharing). CORS è un meccanismo di sicurezza che consente o blocca le richieste da domini diversi da quello dell'API.
 from fastapi.middleware.cors import CORSMiddleware

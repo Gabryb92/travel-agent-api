@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from langchain_core import tool
+from langchain_core.tools import tool
 from serpapi import GoogleSearch
 from pydantic import BaseModel, Field
 from typing import Optional

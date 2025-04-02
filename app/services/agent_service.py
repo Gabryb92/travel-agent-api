@@ -3,7 +3,7 @@ from langchain_openai import ChatOpenAI
 from langgraph.prebuilt import create_react_agent
 
 #Tools
-from tools import flights_finders,hotels_finder,chain_historical_expert,chain_travel_plan
+from app.tools import flights_finders,hotels_finder,chain_historical_expert,chain_travel_plan
 
 FLIGHTS_OUTPUT = """
 format: markdow
