@@ -35,7 +35,7 @@ Chiudi e riapri il terminale per aggiornare il PATH.
 #### 3. Avvia il progetto
 
 ```powershell
-git clone https://github.com/nome-utente/nome-progetto.git
+git clone https://github.com/Gabryb92/travel-agent-api
 cd nome-progetto
 poetry install
 poetry env activate
@@ -70,7 +70,7 @@ source ~/.zprofile
 #### 3. Avvia il progetto
 
 ```bash
-git clone https://github.com/nome-utente/nome-progetto.git
+git clone https://github.com/Gabryb92/travel-agent-api
 cd nome-progetto
 poetry install
 eval $(poetry env activate)
@@ -107,7 +107,7 @@ source ~/.bashrc
 #### 4. Avvia il progetto
 
 ```bash
-git clone https://github.com/nome-utente/nome-progetto.git
+git clone https://github.com/Gabryb92/travel-agent-api
 cd nome-progetto
 poetry install
 eval $(poetry env activate)
