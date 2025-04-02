@@ -8,12 +8,15 @@ from enum import IntEnum
 
 load_dotenv()
 
+#Classe enumerata per le classificazioni degli hotel (da 2 a 5 stelle)
 class HotelClassEnum(IntEnum):
     TWO = 2
     THREE = 3
     FOUR = 4
     FIVE = 5
-    
+
+#modello di input che definisce e valida i parametri di ricerca:
+# località hotel, data check-in e check-out, numero adulti e bambini, classe hotel
 class HotelsInput(BaseModel):
     q: str = Field(description="Location of the hotel")
     check_in_date: str = Field(description="The outbound date (YYYY-MM-DD) e.g. 2024-12-13.")
@@ -25,6 +28,8 @@ class HotelsInput(BaseModel):
 class HotelsInputSchema(BaseModel):
     params : HotelsInput
 
+#Funzione che elabora la richiesta e interagisce con l'API, quando viene chiamta prende i parametri forniti e costruisce una query appropriata per SerpAPI vengono restituiti in italiano i risultati e la valuta in Euro e restituisce 5 risultati.
+#E' stata dichiarata come tool per rendendola ideale per l'integrazione in applicazioni di automazione e chatbot
 @tool(args_schema=HotelsInputSchema)
 def hotels_finder(params: HotelsInput):
     """
@@ -62,7 +67,13 @@ error message as a string.
     try:
         search = GoogleSearch(params)
         results = search.get_dict()["properties"]
-        return results
+       
     except Exception as e:
         print(f"Error: {e}")
         return str(e)
+    
+    # Tracing
+    print("*" * 80)
+    print("hotels_finder")
+    print("*" * 80)
+    return results
