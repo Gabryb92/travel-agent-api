@@ -181,8 +181,23 @@ CORS_ORIGINS=https://ilmiosito.it,https://frontend.local
 
 ---
 
-### Per lanciare il progetto lancia il seguente comando:
+# ▶️ Start progetto:
+
+### 🛠️ Backend
+
+Per avviare l'api lanciare questo comando
 
 ```bash
 poetry run uvicorn app.main:app --reload --port 8080
 ```
+
+### 💻 Frontend
+
+Per avviare la chat copiare il contenuto della cartella frontend in una cartella nuova e lanciare i seguenti comandi:
+
+```bash
+npm install
+npm run dev
+```
+
+## Una volta fatto ciò il progetto è pronto per essere utilizzato! 🚀
